@@ -28,14 +28,14 @@ const Home = () => {
       const { status, user, note } = data;
       //console.log(user.id);
       
-      if (user && user._id) {
-        console.log(user._id);
-        setUserID(user._id);
-        setUsername(user.username);
-        setNotes(note);
-      } else {
-        console.error("User object or user._id is undefined.");
-      }
+      // if (user || user.id) {
+      //   console.log(user.id);
+      //   setUserID(user.id);
+      //   setUsername(user.username);
+      //   setNotes(note);
+      // } else {
+      //   console.error("User object or user._id is undefined.");
+      // }
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
