@@ -26,11 +26,11 @@ const Home = () => {
         { withCredentials: true }
       );
       const { status, user, note } = data;
-      //console.log(user.id);
+      console.log(user._id);
       
-      if (user || user.id) {
-        console.log(user.id);
-        setUserID(user.id);
+      if (user || user._id) {
+        console.log(user._id);
+        setUserID(user._id);
         setUsername(user.username);
         setNotes(note);
       } else {
