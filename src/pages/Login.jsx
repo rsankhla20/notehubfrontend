@@ -45,6 +45,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
+          console.log("redirecting");
           navigate("/");
         }, 1000);
       } else {
