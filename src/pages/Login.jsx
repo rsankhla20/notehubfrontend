@@ -32,7 +32,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://notehubbackend.onrender.com/login",
+        "https://notehub-backend.onrender.com/login",
         {
           ...inputValue,
         },

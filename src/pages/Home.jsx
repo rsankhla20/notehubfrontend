@@ -21,7 +21,7 @@ const Home = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "https://notehubbackend.onrender.com",
+        "https://notehub-backend.onrender.com",
         {},
         { withCredentials: true }
       );
@@ -39,7 +39,7 @@ const Home = () => {
     //console.log(title, content);
     //console.log(userID);
     const { data } = await axios.post(
-      "https://notehubbackend.onrender.com/addNote",
+      "https://notehub-backend.onrender.com/addNote",
       { userID, title, content },
       { withCredentials: true }
     );
@@ -50,7 +50,7 @@ const Home = () => {
     //console.log(id);
     try {
       const { data } = await axios.post(
-        "https://notehubbackend.onrender.com/deleteNote",
+        "https://notehub-backend.onrender.com/deleteNote",
         {
           id,
           userID,
@@ -73,6 +73,7 @@ const Home = () => {
       <Header name={username} onLogout={onLogout} />
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
+        console.log(noteItem);
         return (
           <Note
             key={noteItem._id}
