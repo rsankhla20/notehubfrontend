@@ -74,6 +74,9 @@ const Home = () => {
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         console.log(noteItem);
+        if (noteItem._id === undefined) {
+          return;
+        }
         return (
           <Note
             key={noteItem._id}
