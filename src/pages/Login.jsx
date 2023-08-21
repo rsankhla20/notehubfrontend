@@ -32,14 +32,14 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/login",
+        "https://notehub-backend.onrender.com/login",
         {
           ...inputValue,
         },
         { withCredentials: true }
       );
 
-      console.log(data);
+      //console.log(data);
       const { success, message } = data;
 
       if (success) {

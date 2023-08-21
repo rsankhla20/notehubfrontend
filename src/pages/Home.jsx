@@ -21,12 +21,13 @@ const Home = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:8000",
+        "https://notehub-backend.onrender.com",
         {},
         { withCredentials: true }
       );
       const { status, user, note } = data;
-      console.log(user);
+      //console.log(user.id);
+      console.log(user._id);
       setUserID(user._id);
       setUsername(user.username);
       setNotes(note);
@@ -39,7 +40,7 @@ const Home = () => {
     //console.log(title, content);
     //console.log(userID);
     const { data } = await axios.post(
-      "http://localhost:8000/addNote",
+      "https://notehub-backend.onrender.com/addNote",
       { userID, title, content },
       { withCredentials: true }
     );
@@ -50,7 +51,7 @@ const Home = () => {
     //console.log(id);
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/deleteNote",
+        "https://notehub-backend.onrender.com/deleteNote",
         {
           id,
           userID,
