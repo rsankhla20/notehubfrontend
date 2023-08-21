@@ -26,8 +26,8 @@ const Home = () => {
         { withCredentials: true }
       );
       const { status, user, note } = data;
-      console.log(user.id);
-      setUserID(user.id);
+      console.log(user);
+      setUserID(user._id);
       setUsername(user.username);
       setNotes(note);
     };
@@ -79,8 +79,8 @@ const Home = () => {
         }
         return (
           <Note
-            key={noteItem.id}
-            id={noteItem.id}
+            key={noteItem._id}
+            id={noteItem._id}
             title={noteItem.title}
             content={noteItem.content}
             onDelete={deleteNote}
