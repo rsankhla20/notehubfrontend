@@ -26,16 +26,16 @@ const Home = () => {
         { withCredentials: true }
       );
       const { status, user, note } = data;
-      console.log(user._id);
+      console.log(user._id,"userid");
       
-      if (user || user._id) {
-        console.log(user._id);
+      // if (user || user._id) {
+       // console.log(user._id);
         setUserID(user._id);
         setUsername(user.username);
         setNotes(note);
-      } else {
-        console.error("User object or user._id is undefined.");
-      }
+      // } else {
+      //   console.error("User object or user._id is undefined.");
+      // }
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);
