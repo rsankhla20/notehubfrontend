@@ -35,7 +35,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://notehub-backend.onrender.com/signup",
+        "http://localhost:8000/signup",
         {
           ...inputValue,
         },
