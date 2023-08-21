@@ -27,8 +27,10 @@ const Home = () => {
       );
       const { status, user, note } = data;
       //console.log(user.id);
-      console.log(user._id);
-      setUserID(user._id);
+      
+      const id = user._id;
+      console.log(id);
+      setUserID(id);
       setUsername(user.username);
       setNotes(note);
     };
