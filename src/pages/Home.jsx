@@ -26,6 +26,7 @@ const Home = () => {
         { withCredentials: true }
       );
       const { status, user, note } = data;
+      //console.log(user._id);
       setUserID(user._id);
       setUsername(user.username);
       setNotes(note);

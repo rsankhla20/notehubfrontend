@@ -62,10 +62,12 @@ const Login = () => {
 
   return (
     <div className="loginPage">
-      <p className="heading">
-        <HighlightIcon style={{ fontSize: 40 }} /> NoteHub
-        <p className="tagline">NoteHub: Your Canvas for Ideas</p>
-      </p>
+      <div className="heading">
+        <p>
+          <HighlightIcon style={{ fontSize: 40 }} /> NoteHub
+        </p>
+        <div className="tagline">NoteHub: Your Canvas for Ideas</div>
+      </div>
       <div className="form_container">
         <h2>Login Account</h2>
         <form onSubmit={handleSubmit}>

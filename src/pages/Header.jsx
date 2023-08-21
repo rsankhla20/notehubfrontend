@@ -8,10 +8,13 @@ function Header(props) {
 
   return (
     <header>
-      <h1>
-        <HighlightIcon />
-        NoteHub<p className="tagline">NoteHub: Your Canvas for Ideas</p>
-      </h1>
+      <div>
+        <h1>
+          <HighlightIcon />
+          NoteHub
+        </h1>
+        <div className="tagline">NoteHub: Your Canvas for Ideas</div>
+      </div>
       <p className="userName">Welcome {props.name}</p>
       <button className="logoutbtn" onClick={handleclick}>
         LOGOUT
