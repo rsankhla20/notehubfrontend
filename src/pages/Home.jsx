@@ -17,9 +17,9 @@ const Home = () => {
 
   useEffect(() => {
     const verifyCookie = async () => {
-      if (!cookies.token) {
-        navigate("/login");
-      }
+      // if (!cookies.token) {
+      //   navigate("/login");
+      // }
       const { data } = await axios.post(
         "https://notehub-backend.onrender.com",
         {},
